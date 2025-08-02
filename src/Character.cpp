@@ -17,7 +17,7 @@ bool Character::is_encodable() const noexcept {
 }
 
 char Character::get_byte() const noexcept {
-    return encodable ? U'\0' : inside.byte;
+    return encodable ? '\0' : inside.byte;
 }
 
 uint32_t Character::get_position() const noexcept {
