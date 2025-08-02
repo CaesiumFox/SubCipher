@@ -4,6 +4,16 @@ include_dir = include_directories('include')
 
 sources = []
 
+cxxopts_dep = dependency('cxxopts', required: true)
+
 subdir('src/')
 
-executable('subc', sources, include_directories: include_dir)
+executable(
+    'subc',
+    sources,
+    include_directories:
+        include_dir,
+    dependencies: [
+        cxxopts_dep
+    ]
+)
