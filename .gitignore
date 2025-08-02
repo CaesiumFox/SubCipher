@@ -1,0 +1,9 @@
+.vscode/
+.vs/
+
+bin/
+bindir/
+build/
+builddir/
+
+ignore/
