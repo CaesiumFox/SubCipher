@@ -20,6 +20,6 @@ char Character::get_byte() const noexcept {
     return encodable ? '\0' : inside.byte;
 }
 
-uint32_t Character::get_position() const noexcept {
+size_t Character::get_position() const noexcept {
     return encodable ? inside.position : 0u;
 }

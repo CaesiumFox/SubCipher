@@ -10,12 +10,12 @@ namespace sub_cipher {
 
         bool is_encodable() const noexcept;
         char get_byte() const noexcept;
-        uint32_t get_position() const noexcept;
+        size_t get_position() const noexcept;
     private:
         union {
             // a utf-8 byte
             char byte;
-            uint32_t position;
+            size_t position;
         } inside;
         bool encodable;
     };
