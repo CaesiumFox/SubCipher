@@ -5,15 +5,16 @@
 namespace sub_cipher {
     class Character {
     public:
-        Character(char32_t codepoint);
+        Character(char byte);
         explicit Character(uint32_t position);
 
         bool is_encodable() const noexcept;
-        char32_t get_codepoint() const noexcept;
+        char get_byte() const noexcept;
         uint32_t get_position() const noexcept;
     private:
         union {
-            char32_t codepoint;
+            // a utf-8 byte
+            char byte;
             uint32_t position;
         } inside;
         bool encodable;
