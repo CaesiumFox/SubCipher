@@ -1,2 +1,3 @@
 # SubCipher
-Simple substitution cipher library and CLI tool
+
+Simple substitution cipher CLI tool
