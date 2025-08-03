@@ -72,4 +72,5 @@ std::string Alphabet::unparse(const std::vector<Character>& chars) const noexcep
             retval += c.get_byte();
         }
     }
+    return retval;
 }
