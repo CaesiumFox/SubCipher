@@ -1,6 +1,6 @@
 #include "utility.hpp"
 
-bool starts_with(std::string_view sample, std::string_view target) {
+bool sub_cipher::starts_with(std::string_view sample, std::string_view target) {
     if (target.size() > sample.size()) {
         return false;
     }
