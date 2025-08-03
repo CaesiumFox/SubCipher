@@ -2,15 +2,17 @@ project('SubCipher', 'cpp', default_options: [ 'cppstd=c++23' ])
 
 include_dir = include_directories('include')
 
-sources = []
+lib_sources = []
+app_sources = []
+
+subdir('src/')
+subdir('test/')
 
 cxxopts_dep = dependency('cxxopts', required: true)
 
-subdir('src/')
-
 executable(
     'subc',
-    sources,
+    lib_sources + app_sources,
     include_directories:
         include_dir,
     dependencies: [

@@ -1,7 +1,10 @@
-sources += files([
+lib_sources += files([
     'Alphabet.cpp',
     'Character.cpp',
     'cipher.cpp',
-    'main.cpp',
     'utility.cpp'
+])
+
+app_sources += files([
+    'main.cpp'
 ])
