@@ -1,8 +1,11 @@
 #pragma once
 
 #include <cstdint>
+#include <optional>
 #include <string>
 #include <vector>
+
+#include "Character.hpp"
 
 namespace sub_cipher {
     class Alphabet {
@@ -14,10 +17,16 @@ namespace sub_cipher {
             Letter(std::vector<std::string> many_variants);
         private:
             std::vector<std::string> variants;
+            friend class Alphabet;
         };
 
         Alphabet(std::initializer_list<Letter> letters);
         Alphabet(std::vector<Letter> letters);
+
+        std::optional<Character> consume_character(std::string_view& text) const noexcept;
+        std::vector<Character> parse(std::string_view text) const noexcept;
+        std::string unparse(const std::vector<Character>& chars) const noexcept;
+
     private:
         /**
          * @brief Stores a list of letters in the language
