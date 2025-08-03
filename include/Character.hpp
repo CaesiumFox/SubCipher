@@ -5,6 +5,7 @@
 namespace sub_cipher {
     class Character {
     public:
+        Character();
         Character(char byte);
         explicit Character(size_t position);
 

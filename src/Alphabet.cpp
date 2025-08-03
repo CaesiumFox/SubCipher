@@ -42,12 +42,14 @@ std::optional<Character> Alphabet::consume_character(std::string_view& text) con
     }
 
     if (suitable_size > 0) {
+        auto retval = Character(suitable);
         text.remove_prefix(suitable_size);
-        return Character(suitable);
+        return retval;
     }
 
+    auto retval = Character(text[0]);
     text.remove_prefix(1);
-    return Character(text[0]);
+    return retval;
 }
 
 std::vector<Character> Alphabet::parse(std::string_view text) const noexcept {

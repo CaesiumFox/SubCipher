@@ -2,6 +2,10 @@
 
 using namespace sub_cipher;
 
+Character::Character():
+    Character('\0')
+{}
+
 Character::Character(char byte) {
     inside.byte = byte;
     encodable = false;
