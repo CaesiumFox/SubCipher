@@ -1,7 +1,6 @@
 lib_sources += files([
     'Alphabet.cpp',
     'Character.cpp',
-    'cipher.cpp',
     'utility.cpp'
 ])
 
