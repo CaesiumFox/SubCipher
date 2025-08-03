@@ -7,7 +7,7 @@ Character::Character(char byte) {
     encodable = false;
 }
 
-Character::Character(uint32_t position) {
+Character::Character(size_t position) {
     inside.position = position;
     encodable = true;
 }

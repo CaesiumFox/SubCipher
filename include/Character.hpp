@@ -6,7 +6,7 @@ namespace sub_cipher {
     class Character {
     public:
         Character(char byte);
-        explicit Character(uint32_t position);
+        explicit Character(size_t position);
 
         bool is_encodable() const noexcept;
         char get_byte() const noexcept;
