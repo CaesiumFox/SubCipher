@@ -7,3 +7,5 @@ lib_sources += files([
 app_sources += files([
     'main.cpp'
 ])
+
+subdir('ciphers/')
