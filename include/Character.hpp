@@ -11,7 +11,9 @@ namespace sub_cipher {
 
         bool is_encodable() const noexcept;
         char get_byte() const noexcept;
+        void set_byte(char new_char) noexcept;
         size_t get_position() const noexcept;
+        void set_position(size_t new_pos) noexcept;
     private:
         union {
             // a utf-8 byte
