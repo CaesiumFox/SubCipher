@@ -27,6 +27,8 @@ namespace sub_cipher {
         std::vector<Character> parse(std::string_view text) const noexcept;
         std::string unparse(const std::vector<Character>& chars) const noexcept;
 
+        size_t get_size() const noexcept;
+
     private:
         /**
          * @brief Stores a list of letters in the language

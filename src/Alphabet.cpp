@@ -76,3 +76,7 @@ std::string Alphabet::unparse(const std::vector<Character>& chars) const noexcep
     }
     return retval;
 }
+
+size_t Alphabet::get_size() const noexcept {
+    return letters.size();
+}
